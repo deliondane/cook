@@ -34,6 +34,7 @@ function App({children}) {
     <DataContext.Provider value={{data, loading}}>
     <Nav />
     <Routes>
+      {/* <Route path='/' element={<Nav />} /> */}
       <Route path="/" element={<Home />} />
       <Route path="/recipe/:id" element={<Recipe />} />
       <Route path="/category/:category" element={<Category />} />

@@ -1,6 +1,12 @@
 import React, { useContext } from "react";
 import { DataContext } from "../App";
 import { NavLink } from "react-router-dom";
+import { GiCook } from "react-icons/gi";
+import { TbCookieManFilled } from "react-icons/tb";
+import { PiCookingPotFill } from "react-icons/pi";
+import { FaCookieBite } from "react-icons/fa";
+import { GiFishCooked } from "react-icons/gi";
+import { IoSearch } from "react-icons/io5";
 
 const Nav = () => {
   const { data, loading } = useContext(DataContext);
@@ -12,8 +18,7 @@ const Nav = () => {
   const categories = [...new Set(data.map((item) => item.RCP_PAT2))];
 
   const activeStyle = {
-    color: "#f00",
-    textShadow: "2px 2px 5px #ccc",
+    color: "#ff4e6b"
   };
   return (
     <div className="nav">
@@ -24,7 +29,7 @@ const Nav = () => {
               to="/"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
-              전체
+            <GiCook />
             </NavLink>
           </li>
           {categories.map((category) => (
@@ -33,7 +38,10 @@ const Nav = () => {
                 to={`category/${category}`}
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-                {category}
+                {category === "반찬" && <TbCookieManFilled />}
+                {category === "국&찌개" && <PiCookingPotFill />}
+                {category === "후식" && <FaCookieBite />}
+                {category === "일품" && <GiFishCooked />}
               </NavLink>
             </li>
           ))}

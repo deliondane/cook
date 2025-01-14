@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 @charset "utf-8";
 
 //변수
@@ -26,7 +32,7 @@ $ff: 'Pretendard', sans-serif;
 $mobile: 0px;
 $tablet: 768px;
 $desktop: 992px;
-*{box-sizing: border-box;}
+*{box-sizing: border-box; font-family: "yg-jalnan" !important; background-color: #fff8e1;} 
 
 $breakpoints: (
 	'sm': (
@@ -145,3 +151,15 @@ table {
 	border-spacing: 0;
 }
 a{text-decoration: none; color: #222}
+
+::-webkit-scrollbar {
+    width: 12px;  /* 세로축 스크롤바 폭 너비 */
+}
+::-webkit-scrollbar-thumb{
+	background-color: #ff6f87;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #fff8e1;
+}

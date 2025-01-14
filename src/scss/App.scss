@@ -1,15 +1,34 @@
 //메뉴
 .nav {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 20px;
+  position: absolute;
   .inner {
-    .menu {
-      display: flex;
-      justify-content: center;
+    position: fixed;
+    width: 74px;
+    height: 100%;
+    background: #fff8e1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #dad3bc52;
+    z-index: 99;
+    ul.menu {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       li {
+        text-indent: 1.5em;
+        line-height: 5.8em;
+        font-size: 15px;
         a {
-          padding: 10px 20px;
-          color: #666;
+          display: block;
+          text-decoration: none;
+          color: #222;
+          :nth-child(1) {
+            font-size: 25px;
+          }
         }
       }
     }
@@ -18,49 +37,83 @@
 
 //Home
 .home {
-    margin-top: 30px;
-    .swiperMain{
-        padding: 0 50px;
-        width: 100%;
-        height: 600px;
-        object-fit: cover;
-        img{
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-    }
-    .title {
-      margin-top: 30px;
-    h2 {
-      text-align: center;
-    }
-  }
-  .homeList {
-    max-width: 1200px;
+  margin-left: 74px;
+  background-color: #fff8e1;
+  padding: 100px;
+  .swiperMain {
     width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    position: relative;
-    .list {
-      .item {
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    .swiperSlide {
+      a {
         width: 100%;
+        display: flex;
+        img {
+          height: 500px;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        .text {
+          margin-left: 30px;
+          color: #333;
+          > .title {
+            font-size: 30px;
+            color: #ff4e6b;
+          }
+          .material {
+            margin: 10px 0;
+            width: 85%;
+            font-size: 16px;
+            font-weight: lighter;
+          }
+          > .recipe {
+            font-size: 16px;
+            margin: 10px 0;
+          }
+        }
       }
     }
   }
-  .swiper_btn {
-    font-size: 25px;
-    .swiperPrevBtn {
-      position: absolute;
-      top: 40%;
-      left: 10px;
-      z-index: 100;
+  .title {
+    margin-top: 60px;
+    h2 {
+      text-align: left;
+      font-size: 40px;
+      color: #222;
     }
-    .swiperNextBtn {
-      position: absolute;
-      top: 40%;
-      right: 10px;
-      z-index: 100;
+  }
+  .homeList {
+    max-width: 1600px;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    .swiper {
+      height: 100%;
+      .list {
+        width: 100%;
+        .item {
+          width: 100%;
+          height: fit-content;
+          user-select: none;
+          a {
+            > .item-img {
+              > img {
+                border-radius: 8px;
+              }
+            }
+            > .item-text-wrap {
+            }
+          }
+        }
+      }
+      .swiper-scrollbar {
+        background-color: #ccc; /* 스크롤바 배경색 */
+        height: 5px; /* 스크롤바 높이 */
+        .swiper-scrollbar-drag {
+          background-color: #ff4e6b; /* 드래그 핸들의 색상 */
+        }
+      }
     }
   }
 }
@@ -70,7 +123,7 @@
   display: flex;
   flex-wrap: wrap;
   .item {
-    width: 25%;
+    width: 20%;
     padding: 10px;
     .item-img {
       width: 100%;
@@ -85,19 +138,20 @@
         width: 100%;
         height: 100%;
         position: absolute;
+        border-radius: 10px;
       }
     }
     .list-text-wrap {
       margin-top: 15px;
       .list-txt-title {
-        font-size: 14px;
+        font-size: 16px;
         overflow: hidden;
         text-overflow: ellipsis; //...
         white-space: nowrap;
       }
       .list-sub-txt-wrap {
         color: #666;
-        font-size: 12px;
+        font-size: 13px;
         .list-txt-kcal {
           margin: 5px 0;
           .kcalIcon {
@@ -117,9 +171,14 @@
 }
 
 .category {
-  padding: 20px;
+  padding: 100px 20px;
+  margin-left: 74px;
+  background-color: #fff8e1;
   h2 {
-    text-align: center;
+    padding: 0 30px;
+    text-align: left;
+    font-size: 30px;
+    color: #222;
   }
 }
 
