@@ -79,31 +79,35 @@ const Recipe = () => {
         <div className="recipeDetailInfo2">
           <div className="info-title2">영양정보</div>
           <div className="table">
-            <div className="row">
-              <span className="col">열량: </span>
-              <span className="col_info">{INFO_ENG}</span>
+            <div className="row-left">
+              <div className="row">
+                <span className="col">열량: </span>
+                <span className="col_info">{INFO_ENG}</span>
+              </div>
+              <div className="row">
+                <span className="col">탄수화물: </span>
+                <span className="col_info">{INFO_CAR}</span>
+              </div>
+              <div className="row">
+                <span className="col">단백질: </span>
+                <span className="col_info">{INFO_PRO}</span>
+              </div>
             </div>
-            <div className="row">
-              <span className="col">탄수화물: </span>
-              <span className="col_info">{INFO_CAR}</span>
-            </div>
-            <div className="row">
-              <span className="col">단백질: </span>
-              <span className="col_info">{INFO_PRO}</span>
-            </div>
-            <div className="row">
-              <span className="col">지방: </span>
-              <span className="col_info">{INFO_FAT}</span>
-            </div>
-            <div className="row">
-              <span className="col">나트륨: </span>
-              <span className="col_info">{INFO_NA}</span>
-            </div>
-            <div className="tip">
-              <span className="col">조리법: </span>
-              <span className="col_info">{RCP_NA_TIP}</span>
+            <div className="row-right">
+              <div className="row">
+                <span className="col">지방: </span>
+                <span className="col_info">{INFO_FAT}</span>
+              </div>
+              <div className="row">
+                <span className="col">나트륨: </span>
+                <span className="col_info">{INFO_NA}</span>
+              </div>
             </div>
           </div>
+              <div className="tip">
+                <span className="col">조리법: </span>
+                <span className="col_info">{RCP_NA_TIP}</span>
+              </div>
         </div>
       </div>
     </div>

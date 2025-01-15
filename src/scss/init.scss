@@ -153,7 +153,8 @@ table {
 a{text-decoration: none; color: #222}
 
 ::-webkit-scrollbar {
-    width: 12px;  /* 세로축 스크롤바 폭 너비 */
+    width: 10px;  /* 세로축 스크롤바 폭 너비 */
+	height: 10px;
 }
 ::-webkit-scrollbar-thumb{
 	background-color: #ff6f87;
